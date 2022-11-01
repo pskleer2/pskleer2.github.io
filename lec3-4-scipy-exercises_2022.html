@@ -14638,7 +14638,7 @@ $$J(x) = \begin{bmatrix}
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Underdetermined-linear-systems-revisited">Underdetermined linear systems revisited<a class="anchor-link" href="#Underdetermined-linear-systems-revisited">&#182;</a></h2><p>Consider an underdetermined linear system of equations, i.e.,</p>
+<h2 id="Overdetermined-linear-systems">Overdetermined linear systems<a class="anchor-link" href="#Overdetermined-linear-systems">&#182;</a></h2><p>Consider an overdetermined linear system of equations, i.e.,</p>
 $$ Ax = b,$$<p>with $A$ an ${m \times n}$ matrix with $m &gt; n$, where $A \in \mathbb{R}^{m \times n}$ and $b \in \mathbb{R}^m$. In general, no solution to this system will exist.</p>
 <p>We have already seen the least-squares solution obtained from</p>
 $$\min_x z(A,x,b) = \| Ax - b \|_2^2.$$<p>Note that the least-squares solutions places no restrictions on $x$. In many practical applications, we may desire to restrict the coefficients of $x$, for instance by looking at the 1-norm: $\| x \|_1 = \sum_i |x_i|$. The problem now becomes a two-objective optimization problem: the MSE (mean squared error) and the 1-norm of the coefficients. This can be incorporated by adding a penalty to the objective:</p>
@@ -14657,7 +14657,7 @@ $$\min_x z(x, A, b, \mu) = \frac{1}{m} \| Ax - b \|_2^2 + \mu \| x \|_1.$$
 <li>Create a random $500 \times 100$ system of linear equations with all coefficients taken uniformly in $[0, 1]$. (That is, you have to generate $A$ and $b$.)</li>
 <li>Get the standard least-squares solution and evaluate the MSE and 1-norm of the coefficients $x$.</li>
 <li>Define the penalized objective, i.e., the sum of the MSE and a 1-norm weighted by a scalar $\mu$.</li>
-<li>Minimize the penalized objective for various value of $\mu$ (<code>mu = [0, 0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5]</code>). Use the objective defined in part 3 and the <code>minimize</code> function from <code>scipy.optimize</code> module. Scatter plot the resulting MSEs and 1-norm of the solutions in a figure.</li>
+<li>Minimize the penalized objective for various value of $\mu$ (<code>mu = [0, 0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5]</code>). Use the objective defined in part 3 and the <code>minimize</code> function from <code>scipy.optimize</code> module (choose an appropriate initial solution yourself). Scatter plot the resulting MSEs and 1-norm of the solutions in a figure.</li>
 </ol>
 
 </div>
