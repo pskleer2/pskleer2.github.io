@@ -14559,12 +14559,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14607,7 +14607,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Change numpy&#39;s printoptions: we don&#39;t need to see so many digits or scientific notation.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Change numpy's printoptions: we don't need to see so many digits or scientific notation.</span>
 <span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
@@ -14665,7 +14665,7 @@ $$<ol>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">distance_two_loops</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Compute Euclidean distance matrix using two loops.&quot;&quot;&quot;</span>
+    <span class="sd">"""Compute Euclidean distance matrix using two loops."""</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
@@ -14679,7 +14679,7 @@ $$<ol>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="k">def</span> <span class="nf">distance_one_loop</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Compute Euclidean distance matrix using one loop.&quot;&quot;&quot;</span>
+    <span class="sd">"""Compute Euclidean distance matrix using one loop."""</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
@@ -14885,7 +14885,7 @@ $$<ol>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">cramer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Solve square linear system using Cramer&#39;s rule.</span>
+    <span class="sd">"""Solve square linear system using Cramer's rule.</span>
 <span class="sd">    </span>
 <span class="sd">    Compute the solution `x` of the square linear system of equations</span>
 <span class="sd">        ax = b</span>
@@ -14894,10 +14894,10 @@ $$<ol>
 <span class="sd">    ---------</span>
 <span class="sd">        a : (n, n) ndarray</span>
 <span class="sd">        b : (n,) ndarray</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span>
     <span class="k">if</span> <span class="n">m</span> <span class="o">!=</span> <span class="n">n</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Matrix must be square.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Matrix must be square.'</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="c1">#Alternatively, you can, for example, use x = np.zeros(m)</span>
     <span class="c1"># Compute determinant after replacing i-th column by `b`.</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
@@ -14920,7 +14920,7 @@ $$<ol>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Test Cramer&#39;s rule.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Test Cramer's rule.</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -14930,9 +14930,9 @@ $$<ol>
 
 <span class="c1"># Verify correctness (both tests are sufficient).</span>
 <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">a</span> <span class="o">@</span> <span class="n">y</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Result okay&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Result okay'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Something&#39;s wrong&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Something's wrong"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14972,6 +14972,7 @@ $$<ol>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Obtaining-different-solutions-to-a-under-determined-linear-system">Obtaining different solutions to a under-determined linear system<a class="anchor-link" href="#Obtaining-different-solutions-to-a-under-determined-linear-system">&#182;</a></h2><p>Create a matrix $A \in \mathbb{R}^{6 \times 10}$, and and a vector $b \in \mathbb{R}^6$ both with standard normal random numbers.</p>
 <ol>
+<li>Check that the matrix has full rank (i.e., 6); if not generate new standard normal random numbers. </li>
 <li>Obtain an arbitrary particular solution $\tilde{x}$ for the linear system $Ax=b$.</li>
 <li>Find the particular solution $x\in\mathbb{R}^{10}$ for which the first four elements are equal to zero. Rather than using the <em>null space</em> of $A$, just discard the first four columns of $A$ and solve the remaining 6-by-6 system of linear equations.</li>
 <li>Verify that the vectors you found in (1) and (2) are actual solutions to the system $Ax=b$.</li>
@@ -14993,7 +14994,7 @@ $$<ol>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
 <span class="n">rank</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_rank</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Matrix rank: </span><span class="si">{</span><span class="n">rank</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1">#or print(&#39;Matrix rank: %i&#39; % (rank))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Matrix rank: </span><span class="si">{</span><span class="n">rank</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>  <span class="c1">#or print('Matrix rank: %i' % (rank))</span>
 </pre></div>
 
      </div>
@@ -15186,22 +15187,22 @@ True
 <span class="kn">import</span> <span class="nn">itertools</span> <span class="k">as</span> <span class="nn">it</span>
 
 <span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; This function computes the function value of g in the point x</span>
+    <span class="sd">""" This function computes the function value of g in the point x</span>
 <span class="sd">    </span>
 <span class="sd">    Arguments</span>
 <span class="sd">    ---------</span>
 <span class="sd">        x       : The desired point in which function is evaluated.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">21</span><span class="o">/</span><span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">box_minimum</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This functions computes the minimum value of a function over a specified box domain</span>
+    <span class="sd">"""This functions computes the minimum value of a function over a specified box domain</span>
 <span class="sd">    </span>
 <span class="sd">    Arguments</span>
 <span class="sd">    ---------</span>
 <span class="sd">        g       : The function over which is optimised (should be R^3 -&gt; R)</span>
 <span class="sd">        a,...,f : Specify box domain</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">function_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">g</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">it</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="o">+</span><span class="mi">1</span><span class="p">))])</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">function_values</span><span class="p">)</span>
 </pre></div>
